@@ -85,7 +85,7 @@ const SharePage = () => {
       setSubmitting(true)
 
       // Make a fetch request to the backend API
-      const response = await fetch(`http://localhost:5000/api/files/share/${token}/download?code=${verificationCode}`, {
+      const response = await fetch(`https://back-express-production.up.railway.app/api/files/share/${token}/download?code=${verificationCode}`, {
         method: "GET",
       })
 
