@@ -17,7 +17,7 @@ export const registerUser = async (userData) => {
 
 export const requestLoginToken = async (userData) => {
   try {
-    const response = await fetch(`https://www.shar.great-site.net/api/auth/request-token`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/auth/request-token`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),
@@ -31,7 +31,7 @@ export const requestLoginToken = async (userData) => {
 
 export const verifyLoginToken = async (verificationData) => {
   try {
-    const response = await fetch(`https://www.shar.great-site.net/api/auth/verify-token`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/auth/verify-token`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(verificationData),
@@ -51,7 +51,7 @@ export const verifyLoginToken = async (verificationData) => {
 
 export const requestPasswordReset = async (resetData) => {
   try {
-    const response = await fetch(`hhttps://www.shar.great-site.net/api/auth/forgot-password`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/auth/forgot-password`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(resetData),
@@ -65,7 +65,7 @@ export const requestPasswordReset = async (resetData) => {
 
 export const verifyPasswordReset = async (resetData) => {
   try {
-    const response = await fetch(`https://www.shar.great-site.net/api/auth/reset-password`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/auth/reset-password`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(resetData),
@@ -85,7 +85,7 @@ export const getUserProfile = async () => {
       return { error: "Unauthorized" }
     }
 
-    const response = await fetch(`https://www.shar.great-site.net/api/user/profile`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/user/profile`, {
       method: "GET",
       headers: {
         Authorization: token,
@@ -105,7 +105,7 @@ export const updateUserProfile = async (profileData) => {
       return { error: "Unauthorized" }
     }
 
-    const response = await fetch(`https://www.shar.great-site.net/api/user/update-profile`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/user/update-profile`, {
       method: "PUT",
       headers: {
         Authorization: token,
@@ -127,7 +127,7 @@ export const updateUserPassword = async (passwordData) => {
       return { error: "Unauthorized" }
     }
 
-    const response = await fetch(`https://www.shar.great-site.net/api/user/update-password`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/user/update-password`, {
       method: "PUT",
       headers: {
         Authorization: token,
@@ -150,7 +150,7 @@ export const getUserFiles = async () => {
       return { error: "Unauthorized" }
     }
 
-    const response = await fetch(`https://www.shar.great-site.net/api/files`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/files`, {
       method: "GET",
       headers: {
         Authorization: token,
