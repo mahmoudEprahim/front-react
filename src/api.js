@@ -3,7 +3,7 @@
 // Auth API calls
 export const registerUser = async (userData) => {
   try {
-    const response = await fetch(`https://www.shar.great-site.net/api/auth/register`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/auth/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),
