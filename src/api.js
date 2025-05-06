@@ -150,7 +150,7 @@ export const getUserFiles = async () => {
       return { error: "Unauthorized" }
     }
 
-    const response = await fetch(`https://www.shar.great-site.net/api/files`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/files`, {
       method: "GET",
       headers: {
         Authorization: token,
@@ -192,7 +192,7 @@ export const uploadFile = async (formData, progressCallback) => {
         reject(new Error("Upload failed"))
       })
 
-      xhr.open("POST", `https://www.shar.great-site.net/api/files/upload`)
+      xhr.open("POST", `https://back-express-production.up.railway.app/api/files/upload`)
       xhr.setRequestHeader("Authorization", token)
       xhr.send(formData)
     })
