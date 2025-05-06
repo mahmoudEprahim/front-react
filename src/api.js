@@ -209,7 +209,7 @@ export const deleteFile = async (fileId) => {
       return { error: "Unauthorized" }
     }
 
-    const response = await fetch(`/api/files/${fileId}`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/files/${fileId}`, {
       method: "DELETE",
       headers: {
         Authorization: token,
@@ -262,7 +262,7 @@ export const shareFile = async (fileId) => {
       return { error: "Unauthorized" }
     }
 
-    const response = await fetch(`/api/files/${fileId}/share`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/files/${fileId}/share`, {
       method: "POST",
       headers: {
         Authorization: token,
@@ -279,7 +279,7 @@ export const shareFile = async (fileId) => {
 //! New Share API functions
 export const getSharedFileInfo = async (shareToken) => {
   try {
-    const response = await fetch(`/api/files/share/${shareToken}/info`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/files/share/${shareToken}/info`, {
       method: "GET",
     })
     return await response.json()
@@ -291,7 +291,7 @@ export const getSharedFileInfo = async (shareToken) => {
 
 export const requestShareAccess = async (shareToken) => {
   try {
-    const response = await fetch(`/api/files/share/${shareToken}/request-access`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/files/share/${shareToken}/request-access`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -306,7 +306,7 @@ export const requestShareAccess = async (shareToken) => {
 
 export const verifyShareAccess = async (shareToken, verificationCode) => {
   try {
-    const response = await fetch(`/api/files/share/${shareToken}/verify-access`, {
+    const response = await fetch(`https://back-express-production.up.railway.app/api/files/share/${shareToken}/verify-access`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
